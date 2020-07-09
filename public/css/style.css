@@ -15,6 +15,49 @@
   margin: 0 auto;
   text-align: center; }
 
+.cursor {
+  width: 2rem;
+  height: 4rem;
+  position: absolute;
+  bottom: 3.9rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0);
+  animation: blink 1s ease-in-out infinite;
+  -webkit-animation: blink 1s ease-in-out infinite;
+  -moz-animation: blink 1s ease-in-out infinite; }
+
+@keyframes blink {
+  0% {
+    background-color: rgba(255, 255, 255, 0); }
+  100% {
+    background-color: #c2c2c2; } }
+@-webkit-keyframes blink {
+  0% {
+    background-color: rgba(255, 255, 255, 0); }
+  100% {
+    background-color: #c2c2c2; } }
+@-moz-keyframes blink {
+  0% {
+    background-color: rgba(255, 255, 255, 0); }
+  100% {
+    background-color: #c2c2c2; } }
+@keyframes slide_in_down {
+  0% {
+    transform: translateY(-3rem); }
+  100% {
+    transform: translateY(0); } }
+@-webkit-keyframes slide_in_down {
+  0% {
+    transform: translateY(-3rem); }
+  100% {
+    transform: translateY(0); } }
+@-moz-keyframes slide_in_down {
+  0% {
+    transform: translateY(-3rem); }
+  100% {
+    transform: translateY(0); } }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,18 +72,35 @@ body {
 
 #intro {
   height: 100vh;
-  background: linear-gradient(135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/intro.jpg) center no-repeat;
+  background: linear-gradient(135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/intro2.png) center no-repeat;
   background-size: cover;
   color: #f4f4f4; }
+  #intro #info-container {
+    position: relative;
+    overflow: hidden; }
   #intro h1 {
     font-family: "Source Code Pro", monospace;
     font-weight: 500;
     font-size: 3rem;
+    line-height: 4rem;
     letter-spacing: 1.1rem; }
+    #intro h1 span {
+      display: inline-block;
+      min-width: 2.9rem;
+      transform: translateY(-3rem);
+      animation: slide_in_down .15s ease-in forwards;
+      -webkit-animation: slide_in_down .15s ease-in forwards;
+      -moz-animation: slide_in_down .15s ease-in forwards; }
+  #intro #typing-container {
+    display: inline-block;
+    height: 4rem;
+    margin: 1rem; }
   #intro h3 {
+    display: inline-block;
     font-family: "Source Code Pro", monospace;
     font-weight: 600;
-    font-size: 4rem; }
+    font-size: 4rem;
+    line-height: 4rem; }
   #intro p {
     font-family: "Source Code Pro", monospace;
     font-weight: 500;

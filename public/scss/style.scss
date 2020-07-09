@@ -17,21 +17,44 @@ body{
 
 #intro{
   height: 100vh;
-  background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100% ), url(../images/intro.jpg) center no-repeat;
+  background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100% ), url(../images/intro2.png) center no-repeat;
   background-size: cover;
   color: $light-color;
+
+  #info-container{
+    position: relative;
+    overflow: hidden;
+  }
 
   h1{
     font-family: $primary-font;
     font-weight: 500;
     font-size: 3rem;
+    line-height: 4rem;
     letter-spacing: 1.1rem;
+
+    span {
+      display: inline-block;
+      min-width: 2.9rem;
+      transform: translateY(-3rem);
+      animation: slide_in_down .15s ease-in forwards;
+      -webkit-animation: slide_in_down .15s ease-in forwards;
+      -moz-animation: slide_in_down .15s ease-in forwards;
+    }
+  }
+
+  #typing-container{
+    display: inline-block;
+    height: 4rem;
+    margin: 1rem;
   }
 
   h3{
+    display: inline-block;
     font-family: $primary-font;
     font-weight: 600;
     font-size: 4rem;
+    line-height: 4rem;
   }
 
   p{
