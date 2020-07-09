@@ -1,0 +1,42 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 10px;
+  font-family: $primary-font;
+}
+
+body{
+  background-color: $light-color;
+}
+
+#intro{
+  height: 100vh;
+  background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100% ), url(../images/intro.jpg) center no-repeat;
+  background-size: cover;
+  color: $light-color;
+
+  h1{
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 1.1rem;
+  }
+
+  h3{
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 4rem;
+  }
+
+  p{
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+}
