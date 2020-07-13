@@ -18,7 +18,7 @@ function nameDrop(name){
         if(i <= totalLetters){
             setTimeout(function(){
                 dropLetter();
-            },200);
+            },150);
         } else {
             setTimeout(function(){
                 typeString('FULL STACK WEB DEVELOPER');
@@ -46,12 +46,12 @@ function typeString(string){
         if(i <= totalLetters){
             setTimeout(function(){
                 typeLetter();
-            },150);
+            },Math.floor(Math.random() * 150) + 50);
         } else {
             setTimeout(function(){
-                cursor.parentNode.removeChild(cursor);
-                revealSkills();
+                // cursor.parentNode.removeChild(cursor);
             }, 500);
+            revealSkills();
         }
     }
 
@@ -59,5 +59,41 @@ function typeString(string){
 }
 
 function revealSkills(){
-    console.log('reveal');
+    document.querySelector('#skill-container p').style.opacity = '1';
+
+    setTimeout(function(){
+        document.querySelector('#info-container button').style.display = 'block';
+    }, 1500);
+}
+
+function toggleMobileMenu(elem){
+    var windowWidth = document.body.clientWidth;
+    var nav = document.querySelector('nav');
+
+    if(elem.classList.contains('icon-closed')){
+        elem.className = 'material-icons icon-open';
+        nav.style.transform += 'translateX('+ windowWidth +'px)';
+    } else {
+        elem.className = 'material-icons icon-closed';
+        nav.style.transform += 'translateX(15rem)';
+    }
+}
+
+function handleMenuState(elem){
+    var menuIcon = document.querySelector('.mobile-menu i');
+
+    if(elem.classList.contains('nav-open') && menuIcon.classList.contains('icon-open')){
+        return;
+    } else if(elem.className === "" && menuIcon.classList.contains('icon-closed')){
+        return;
+    } else if(menuIcon.classList.contains('icon-open')){
+        menuIcon.innerHTML = 'close';
+        elem.className = 'nav-open';
+        elem.style.transform += 'translateX(-15rem)';
+    } else if(menuIcon.classList.contains('icon-closed')){
+        menuIcon.innerHTML = 'menu';
+        elem.className = '';
+        var windowWidth = document.body.clientWidth;
+        elem.style.transform += 'translateX(-'+ windowWidth +'px)';
+    }
 }

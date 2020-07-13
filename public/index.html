@@ -7,11 +7,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
         <title>Kyle Bennett Portfolio</title>
     </head>
     <body>
         <header>
-            <nav></nav>
+            <nav ontransitionend="handleMenuState(this);">
+                <div class="mobile-menu">
+                    <i onclick="toggleMobileMenu(this);" class="material-icons icon-closed">menu</i>
+                </div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section id="intro">
@@ -22,7 +35,12 @@
                             <div class="cursor"></div>
                             <h3>{ <span id="info-title"></span> }</h3>
                         </div>
-                        <p>HTML . CSS . JavaScript . React . Node . Mongo . SQL</p>
+                        <div id="skill-container">
+                            <p>HTML . CSS . JavaScript . React . Node . Mongo . SQL</p>
+                        </div>
+                        <div class="cta-container">
+                            <button class="scale-in">LET'S WORK TOGETHER</button>
+                        </div>
                     </div>
                 </div>
             </section>

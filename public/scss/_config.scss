@@ -1,6 +1,32 @@
 $primary-font: 'Source Code Pro', monospace;
 $secondary-font: 'Source Sans Pro', sans-serif;
 $light-color: #f4f4f4;
+$primary-color: #8ed63b;
+$secondary-color: #ca481f;
+$primary-gradient: linear-gradient( to right, $secondary-color 0%, $primary-color 100% );
+
+button{
+  border: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: $primary-color;
+}
+
+.mobile-menu{
+  i{
+    font-size: 4rem;
+    padding: .5rem;
+  }
+}
 
 .container{
   position: relative;
@@ -25,7 +51,7 @@ $light-color: #f4f4f4;
   width: 2rem;
   height: 4rem;
   position: absolute;
-  bottom: 3.9rem;
+  top: 4.3rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -59,6 +85,25 @@ $light-color: #f4f4f4;
 @-moz-keyframes slide_in_down {
   0% {transform: translateY(-3rem);}
   100% {transform: translateY(0);}
+}
+
+.scale-in{
+  animation: scale_in .75s cubic-bezier(0.710, 0.090, 0.650, 1.295) forwards;
+  -webkit-animation: scale_in .75s cubic-bezier(0.710, 0.090, 0.650, 1.295) forwards;
+  -moz-animation: scale_in .75s cubic-bezier(0.710, 0.090, 0.650, 1.295) forwards;
+}
+
+@keyframes scale_in {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+@-webkit-keyframes scale_in {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+@-moz-keyframes scale_in {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
 }
 
 // Set text color based on bg color

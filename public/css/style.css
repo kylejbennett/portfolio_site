@@ -1,3 +1,19 @@
+button {
+  border: none; }
+
+button:hover {
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  color: #8ed63b; }
+
+.mobile-menu i {
+  font-size: 4rem;
+  padding: .5rem; }
+
 .container {
   position: relative;
   width: 100%;
@@ -19,7 +35,7 @@
   width: 2rem;
   height: 4rem;
   position: absolute;
-  bottom: 3.9rem;
+  top: 4.3rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -58,6 +74,26 @@
     transform: translateY(-3rem); }
   100% {
     transform: translateY(0); } }
+.scale-in {
+  animation: scale_in 0.75s cubic-bezier(0.71, 0.09, 0.65, 1.295) forwards;
+  -webkit-animation: scale_in 0.75s cubic-bezier(0.71, 0.09, 0.65, 1.295) forwards;
+  -moz-animation: scale_in 0.75s cubic-bezier(0.71, 0.09, 0.65, 1.295) forwards; }
+
+@keyframes scale_in {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+@-webkit-keyframes scale_in {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+@-moz-keyframes scale_in {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -70,6 +106,36 @@ html {
 body {
   background-color: #f4f4f4; }
 
+header nav {
+  z-index: 5;
+  background-color: #133940;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  text-align: right;
+  transition: transform .4s ease-in; }
+  header nav ul {
+    display: none;
+    padding: 1rem; }
+    header nav ul li {
+      display: inline-block;
+      padding: 0 2rem; }
+      header nav ul li a {
+        font-family: "Source Sans Pro", sans-serif;
+        color: #ca481f;
+        font-size: 2rem; }
+header nav.nav-open {
+  height: auto;
+  width: 15rem; }
+  header nav.nav-open ul {
+    display: block;
+    text-align: center; }
+    header nav.nav-open ul li {
+      display: block;
+      padding: 1rem 2rem; }
+
 #intro {
   height: 100vh;
   background: linear-gradient(135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/intro2.png) center no-repeat;
@@ -78,32 +144,74 @@ body {
   #intro #info-container {
     position: relative;
     overflow: hidden; }
-  #intro h1 {
-    font-family: "Source Code Pro", monospace;
-    font-weight: 500;
-    font-size: 3rem;
-    line-height: 4rem;
-    letter-spacing: 1.1rem; }
-    #intro h1 span {
+    #intro #info-container h1 {
+      color: #8ed63b;
+      display: block;
+      height: 3rem;
+      font-family: "Source Code Pro", monospace;
+      font-weight: 500;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      letter-spacing: 1.1rem; }
+      #intro #info-container h1 span {
+        display: inline-block;
+        min-width: 1.5rem;
+        transform: translateY(-3rem);
+        animation: slide_in_down .1s ease-in forwards;
+        -webkit-animation: slide_in_down .1s ease-in forwards;
+        -moz-animation: slide_in_down .1s ease-in forwards; }
+    #intro #info-container #typing-container {
       display: inline-block;
-      min-width: 2.9rem;
-      transform: translateY(-3rem);
-      animation: slide_in_down .15s ease-in forwards;
-      -webkit-animation: slide_in_down .15s ease-in forwards;
-      -moz-animation: slide_in_down .15s ease-in forwards; }
-  #intro #typing-container {
-    display: inline-block;
-    height: 4rem;
-    margin: 1rem; }
-  #intro h3 {
-    display: inline-block;
-    font-family: "Source Code Pro", monospace;
-    font-weight: 600;
-    font-size: 4rem;
-    line-height: 4rem; }
-  #intro p {
-    font-family: "Source Code Pro", monospace;
-    font-weight: 500;
-    font-size: 2.5rem; }
+      height: 4rem;
+      margin: 1rem; }
+      #intro #info-container #typing-container h3 {
+        display: inline-block;
+        font-family: "Source Code Pro", monospace;
+        font-weight: 500;
+        font-size: 2.1rem;
+        line-height: 4rem; }
+    #intro #info-container #skill-container p {
+      z-index: 2;
+      font-family: "Source Code Pro", monospace;
+      font-weight: 500;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+      background: linear-gradient(to right, #ca481f 0%, #8ed63b 100%);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text; }
+    #intro #info-container .cta-container {
+      display: inline-block;
+      height: 10rem;
+      padding: 4rem 0 0 0; }
+      #intro #info-container .cta-container button {
+        display: none;
+        font-family: "Source Code Pro", monospace;
+        font-weight: 600;
+        background-color: #ca481f;
+        color: #f4f4f4;
+        padding: 1rem;
+        border-radius: 5px; }
+      #intro #info-container .cta-container button:hover {
+        background-color: #9e3818; }
+
+@media (min-width: 768px) {
+  header nav .mobile-menu {
+    display: none; }
+  header nav ul {
+    display: block; }
+
+  #intro #info-container h1 {
+    font-size: 3rem; }
+    #intro #info-container h1 span {
+      min-width: 2.9rem; }
+  #intro #info-container #typing-container h3 {
+    font-size: 4rem; }
+  #intro #info-container #skill-container p {
+    font-size: 2rem; } }
+@media (min-width: 960px) {
+  #intro #info-container #skill-container p {
+    font-size: 2.5rem; } }
 
 /*# sourceMappingURL=style.css.map */
