@@ -2,6 +2,9 @@ window.onload = function(){
     setTimeout(function (){
         nameDrop('KYLE BENNETT');
     }, 1000);
+
+    var windowWidth = document.body.clientWidth;
+    document.querySelector('nav').style.transform += 'translateX('+ windowWidth +'px)';
 };
 
 function nameDrop(name){
@@ -34,13 +37,14 @@ function typeString(string){
     var i = 0;
     var totalLetters = stringArray.length - 1;
     var cursor = document.querySelector('.cursor');
-    cursor.style.transform += 'translateX(1.2rem)';
+    var cursorRight = (((cursor.offsetWidth)/2) * 0.1).toFixed(2);
+    cursor.style.transform += 'translateX('+ cursorRight +'rem)';
 
     function typeLetter(){
         var span = document.createElement('span');
         span.innerHTML = stringArray[i];
         document.getElementById('info-title').appendChild(span);
-        cursor.style.transform += 'translateX(1.2rem)';
+        cursor.style.transform += 'translateX('+ cursorRight +'rem)';
         i++;
 
         if(i <= totalLetters){
@@ -60,10 +64,17 @@ function typeString(string){
 
 function revealSkills(){
     document.querySelector('#skill-container p').style.opacity = '1';
+    var nav = document.querySelector('nav');
+    nav.style.display = 'block';
 
     setTimeout(function(){
         document.querySelector('#info-container button').style.display = 'block';
     }, 1500);
+
+    setTimeout(function(){
+        var windowWidth = document.body.clientWidth;
+        nav.style.transform += 'translateX(-'+ windowWidth +'px)';
+    }, 2250);
 }
 
 function toggleMobileMenu(elem){
