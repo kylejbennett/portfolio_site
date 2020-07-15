@@ -131,7 +131,7 @@ header nav {
       display: inline-block;
       padding: 0 2rem; }
       header nav ul li a {
-        font-family: "Source Sans Pro", sans-serif;
+        font-family: "Montserrat", sans-serif;
         color: #ca481f;
         font-size: 2rem; }
 header nav.nav-open {
@@ -204,6 +204,38 @@ header nav.nav-open {
       #intro #info-container .cta-container button:hover {
         background-color: #9e3818; }
 
+#about {
+  background: linear-gradient(135deg, rgba(67, 138, 152, 0.9) 0%, rgba(216, 135, 135, 0.8) 100%), url(../images/about.jpg) center no-repeat;
+  background-size: cover;
+  color: #f4f4f4;
+  padding: 2rem; }
+  #about .about-card-container {
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto; }
+    #about .about-card-container .about-card {
+      background: linear-gradient(135deg, rgba(142, 48, 48, 0.6) 0%, rgba(6, 44, 51, 0.6) 100%);
+      font-family: "Montserrat", sans-serif;
+      display: block;
+      width: 100%;
+      max-width: 40rem;
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+      text-align: center;
+      border-radius: 4px; }
+      #about .about-card-container .about-card .material-icons {
+        color: #ca481f;
+        font-size: 4rem; }
+      #about .about-card-container .about-card h3 {
+        color: #8ed63b;
+        font-size: 2rem;
+        font-weight: 500; }
+      #about .about-card-container .about-card p {
+        margin: .5rem 0;
+        font-size: 1.2rem;
+        font-weight: 300; }
+
 @media (min-width: 768px) {
   header nav .mobile-menu {
     display: none; }
@@ -217,9 +249,28 @@ header nav.nav-open {
   #intro #info-container #typing-container h3 {
     font-size: 4rem; }
   #intro #info-container #skill-container p {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+
+  #about .about-card-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin: 0;
+    padding: 0 1rem; }
+    #about .about-card-container .about-card {
+      min-height: 32rem; }
+      #about .about-card-container .about-card .material-icons {
+        font-size: 10rem;
+        margin: 2rem 0 1rem 0; }
+      #about .about-card-container .about-card h3 {
+        font-size: 3rem; }
+      #about .about-card-container .about-card p {
+        font-size: 2rem; } }
 @media (min-width: 960px) {
   #intro #info-container #skill-container p {
     font-size: 2.5rem; } }
+@media (min-width: 1200px) {
+  #about .about-card-container {
+    width: 25%; } }
 
 /*# sourceMappingURL=style.css.map */

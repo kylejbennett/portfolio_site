@@ -142,6 +142,49 @@ header{
 	}
 }
 
+#about{
+	background: linear-gradient( 135deg, rgba(67, 138, 152, 0.9) 0%, rgba(216, 135, 135, 0.8) 100% ), url(../images/about.jpg) center no-repeat;
+	background-size: cover;
+	color: $light-color;
+	padding: 2rem;
+
+	.about-card-container{
+		display: block;
+		width: 90%;
+		text-align: center;
+		margin: 0 auto;
+
+		.about-card{
+			background: linear-gradient(135deg, rgba(142, 48, 48, 0.6) 0%, rgba(6, 44, 51, 0.6) 100%);
+			font-family: $secondary-font;
+			display: block;
+			width: 100%;
+			max-width: 40rem;
+			margin: 1rem auto;
+			padding: 1rem 2rem;
+			text-align: center;
+			border-radius: 4px;
+
+			.material-icons{
+				color: $secondary-color;
+				font-size: 4rem;
+			}
+
+			h3{
+				color: $primary-color;
+				font-size: 2rem;
+				font-weight: 500;
+			}
+
+			p{
+				margin: .5rem 0;
+				font-size: 1.2rem;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
 @media (min-width: 768px){
 	header{
 		nav{
@@ -179,6 +222,31 @@ header{
 			}
 		}
 	}
+
+	#about{
+		.about-card-container{
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			margin: 0;
+			padding: 0 1rem;
+
+			.about-card{
+				min-height: 32rem;
+
+				.material-icons{
+					font-size: 10rem;
+					margin: 2rem 0 1rem 0;
+				}
+				h3{
+					font-size: 3rem;
+				}
+				p{
+					font-size: 2rem;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 960px) {
@@ -189,6 +257,14 @@ header{
 					font-size: 2.5rem;
 				}
 			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	#about{
+		.about-card-container{
+			width: 25%;
 		}
 	}
 }
