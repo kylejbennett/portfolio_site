@@ -13,16 +13,16 @@
     </head>
     <body>
         <header>
-            <nav ontransitionend="handleMenuState(this);">
+            <nav ontransitionend="handleMenuState();">
                 <div class="mobile-menu">
-                    <i onclick="toggleMobileMenu(this);" class="material-icons icon-closed">menu</i>
+                    <i onclick="toggleMobileMenu();" class="material-icons icon-closed">menu</i>
                 </div>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact</a></li>
+                <ul onclick="toggleMobileMenu()">
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -57,7 +57,7 @@
                 --><div class="about-card-container">
                     <div class="about-card">
                         <span class="material-icons">
-                            offline_bolt
+                            devices
                         </span>
                         <h3>RESPONSIVE</h3>
                         <p>My layouts will work on any device, big or small.</p>
@@ -66,7 +66,7 @@
                 --><div class="about-card-container">
                     <div class="about-card">
                         <span class="material-icons">
-                            offline_bolt
+                            emoji_objects
                         </span>
                         <h3>INTUITIVE</h3>
                         <p>User focused for easy to use, intuitive UX/UI.</p>
@@ -75,20 +75,75 @@
                 --><div class="about-card-container">
                     <div class="about-card">
                         <span class="material-icons">
-                            offline_bolt
+                            dynamic_form
                         </span>
                         <h3>DYNAMIC</h3>
                         <p>Websites don't have to be static, I love making pages come to life.</p>
                     </div>
                 </div>
             </section>
-            <section id="services"></section>
+            <section id="services">
+                <div class="slider-container">
+                    <h2>SERVICES</h2>
+                    <div class="slider">
+                        <div class="slide-item">
+                            <span class="material-icons">developer_mode</span>
+                            <h3>Design & Development</h3>
+                            <p>Clean, modern designs - optimized for performance, search engines, and converting users to customers.</p>
+                        </div><!--
+                        --><div class="slide-item">
+                            <span class="material-icons">analytics</span>
+                            <h3>Analytics</h3>
+                            <p>Get insights into who is browsing your site so that you can make smarter business decisions.</p>
+                        </div><!--
+                        --><div class="slide-item">
+                            <span class="material-icons">vertical_split</span>
+                            <h3>Content Management</h3>
+                            <p>Custom WordPress theme and plugin development. Easily update content without knowing how to code.</p>
+                        </div><!--
+                        --><div class="slide-item">
+                            <span class="material-icons">fact_check</span>
+                            <h3>Website Audits</h3>
+                            <p>Looking to improve your page performance, SEO, or user experience? Request a free site audit.</p>
+                        </div><!--
+                        --><div class="slide-item">
+                            <span class="material-icons">construction</span>
+                            <h3>Site Upgrade</h3>
+                            <p>Just looking to improve the overall look and feel of an existing site or application? I'll find a solution that fits your needs.</p>
+                        </div>
+                        <span onclick="prevItem();" class="material-icons arrow left">chevron_left</span>
+                        <span onclick="nextItem();" class="material-icons arrow right">chevron_right</span>
+                    </div>
+                </div>
+            </section>
             <section id="projects"></section>
-            <section id="contact"></section>
+            <section id="contact">
+                <h2>CONTACT</h2>
+                <div class="form-container">
+                    <form method="POST" action="send">
+                        <p>
+                            <label for="name">Name</label>
+                            <input type="text" name="name">
+                        </p>
+                        <p>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email">
+                        </p>
+                        <p>
+                            <label for="message">Message</label>
+                            <textarea name="message" rows="5"></textarea>
+                        </p>
+                        <p>
+                            <button type="submit">Submit</button>
+                        </p>
+                    </form>
+                </div>
+            </section>
         </main>
         <footer>
             <a href="https://www.vecteezy.com/free-vector/technology">Technology Vectors by Vecteezy</a>
         </footer>
+        <script src="js/slider.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d95b56-c742-470a-95ed-9bbf0bfd402a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/slider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/_config.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/_config.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/style.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/style.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/body-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/body-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/intro.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/_config.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_config.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/style.scss" afterDir="false" />
     </list>
@@ -56,7 +61,8 @@
       <workItem from="1594251777546" duration="21755000" />
       <workItem from="1594383374335" duration="8786000" />
       <workItem from="1594407153909" duration="17252000" />
-      <workItem from="1594740049110" duration="11477000" />
+      <workItem from="1594740049110" duration="12274000" />
+      <workItem from="1594832643259" duration="26764000" />
     </task>
     <servers />
   </component>
@@ -68,6 +74,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="217" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1594232462694" />
+    <state x="450" y="150" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1594832447333">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="450" y="150" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1594832447333" />
     <state x="404" y="160" width="728" height="664" key="EditFileWatcherDialog" timestamp="1594232592734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -76,13 +86,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="624" y="42" width="912" height="714" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594409829016" />
-    <state x="467" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1594740048519">
+    <state x="467" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1594832690307">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594740048519" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1594326098647">
+    <state x="467" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594832690307" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1594923777758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/3840.0.1440.900@0.0.1536.824" timestamp="1594923777758" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594326098647" />
   </component>
 </project>

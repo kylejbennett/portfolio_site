@@ -5,6 +5,9 @@ window.onload = function(){
 
     var windowWidth = document.body.clientWidth;
     document.querySelector('nav').style.transform += 'translateX('+ windowWidth +'px)';
+
+    window.addEventListener("resize", formatSlider);
+    formatSlider();
 };
 
 function nameDrop(name){
@@ -50,7 +53,7 @@ function typeString(string){
         if(i <= totalLetters){
             setTimeout(function(){
                 typeLetter();
-            },Math.floor(Math.random() * 150) + 50);
+            },Math.floor(Math.random() * 100) + 40);
         } else {
             setTimeout(function(){
                 // cursor.parentNode.removeChild(cursor);
@@ -69,42 +72,44 @@ function revealSkills(){
 
     setTimeout(function(){
         document.querySelector('#info-container button').style.display = 'block';
-    }, 1500);
+    }, 1000);
 
     setTimeout(function(){
         var windowWidth = document.body.clientWidth;
         nav.style.transform += 'translateX(-'+ windowWidth +'px)';
-    }, 2250);
+    }, 1750);
 }
 
-function toggleMobileMenu(elem){
+function toggleMobileMenu(){
     var windowWidth = document.body.clientWidth;
+    var menuIcon = document.querySelector('.mobile-menu i');
     var nav = document.querySelector('nav');
 
-    if(elem.classList.contains('icon-closed')){
-        elem.className = 'material-icons icon-open';
+    if(menuIcon.classList.contains('icon-closed')){
+        menuIcon.className = 'material-icons icon-open';
         nav.style.transform += 'translateX('+ windowWidth +'px)';
     } else {
-        elem.className = 'material-icons icon-closed';
+        menuIcon.className = 'material-icons icon-closed';
         nav.style.transform += 'translateX(15rem)';
     }
 }
 
 function handleMenuState(elem){
     var menuIcon = document.querySelector('.mobile-menu i');
+    var nav = document.querySelector('nav');
 
-    if(elem.classList.contains('nav-open') && menuIcon.classList.contains('icon-open')){
+    if(nav.classList.contains('nav-open') && menuIcon.classList.contains('icon-open')){
         return;
-    } else if(elem.className === "" && menuIcon.classList.contains('icon-closed')){
+    } else if(nav.className === "" && menuIcon.classList.contains('icon-closed')){
         return;
     } else if(menuIcon.classList.contains('icon-open')){
         menuIcon.innerHTML = 'close';
-        elem.className = 'nav-open';
-        elem.style.transform += 'translateX(-15rem)';
+        nav.className = 'nav-open';
+        nav.style.transform += 'translateX(-15rem)';
     } else if(menuIcon.classList.contains('icon-closed')){
         menuIcon.innerHTML = 'menu';
-        elem.className = '';
+        nav.className = '';
         var windowWidth = document.body.clientWidth;
-        elem.style.transform += 'translateX(-'+ windowWidth +'px)';
+        nav.style.transform += 'translateX(-'+ windowWidth +'px)';
     }
 }

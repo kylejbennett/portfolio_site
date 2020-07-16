@@ -5,6 +5,12 @@ $primary-color: #8ed63b;
 $secondary-color: #ca481f;
 $primary-gradient: linear-gradient( to right, $secondary-color 0%, $primary-color 100% );
 
+h2{
+  color: aquamarine;
+  font-size: 4rem;
+  padding: 2rem 0 0 0;
+}
+
 button{
   border: none;
 }
@@ -112,7 +118,7 @@ a:hover{
     display: block;
     height: 4rem;
     width: 2.4rem;
-    top: 4.1rem;
+    top: 4.3rem;
   }
 }
 

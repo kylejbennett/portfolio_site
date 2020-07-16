@@ -1,3 +1,8 @@
+h2 {
+  color: aquamarine;
+  font-size: 4rem;
+  padding: 2rem 0 0 0; }
+
 button {
   border: none; }
 
@@ -100,7 +105,7 @@ a:hover {
     display: block;
     height: 4rem;
     width: 2.4rem;
-    top: 4.1rem; } }
+    top: 4.3rem; } }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -184,7 +189,7 @@ header nav.nav-open {
       font-weight: 500;
       font-size: 1.2rem;
       opacity: 0;
-      transition: opacity 1.5s ease-in;
+      transition: opacity 1s ease-in;
       background: linear-gradient(to right, #ca481f 0%, #8ed63b 100%);
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -213,7 +218,7 @@ header nav.nav-open {
     display: block;
     width: 90%;
     text-align: center;
-    margin: 0 auto; }
+    margin: 4rem auto; }
     #about .about-card-container .about-card {
       background: linear-gradient(135deg, rgba(142, 48, 48, 0.6) 0%, rgba(6, 44, 51, 0.6) 100%);
       font-family: "Montserrat", sans-serif;
@@ -221,20 +226,65 @@ header nav.nav-open {
       width: 100%;
       max-width: 40rem;
       margin: 1rem auto;
-      padding: 1rem 2rem;
+      padding: 2rem 2rem 3rem 2rem;
       text-align: center;
       border-radius: 4px; }
       #about .about-card-container .about-card .material-icons {
         color: #ca481f;
-        font-size: 4rem; }
+        font-size: 4rem;
+        margin: 1rem 0; }
       #about .about-card-container .about-card h3 {
         color: #8ed63b;
         font-size: 2rem;
         font-weight: 500; }
       #about .about-card-container .about-card p {
         margin: .5rem 0;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 300; }
+
+#services .slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center; }
+#services .slider {
+  position: relative; }
+  #services .slider .material-icons.arrow {
+    cursor: pointer;
+    color: rgba(127, 255, 212, 0.6);
+    z-index: 3;
+    font-size: 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  #services .slider .material-icons.left {
+    left: 0; }
+  #services .slider .material-icons.right {
+    right: 0; }
+#services .slide-item {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: aquamarine;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-align: center;
+  padding: 5rem;
+  transition: transform .3s ease-out; }
+  #services .slide-item .material-icons {
+    font-size: 8rem; }
+  #services .slide-item h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 1rem 0 0.5rem 0; }
+  #services .slide-item p {
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: #000; }
+
+#contact {
+  text-align: center; }
 
 @media (min-width: 768px) {
   header nav .mobile-menu {
@@ -251,26 +301,33 @@ header nav.nav-open {
   #intro #info-container #skill-container p {
     font-size: 2rem; }
 
-  #about .about-card-container {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    margin: 0;
-    padding: 0 1rem; }
-    #about .about-card-container .about-card {
-      min-height: 32rem; }
-      #about .about-card-container .about-card .material-icons {
-        font-size: 10rem;
-        margin: 2rem 0 1rem 0; }
-      #about .about-card-container .about-card h3 {
-        font-size: 3rem; }
-      #about .about-card-container .about-card p {
-        font-size: 2rem; } }
+  #about {
+    padding: 10rem 2rem; }
+    #about .about-card-container {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      margin: 0;
+      padding: 0 1rem; }
+      #about .about-card-container .about-card {
+        min-height: 32rem; }
+        #about .about-card-container .about-card .material-icons {
+          font-size: 10rem; }
+        #about .about-card-container .about-card h3 {
+          font-size: 3rem; }
+        #about .about-card-container .about-card p {
+          font-size: 2rem; }
+
+  #services .slide-item {
+    width: 50%; } }
 @media (min-width: 960px) {
   #intro #info-container #skill-container p {
     font-size: 2.5rem; } }
 @media (min-width: 1200px) {
   #about .about-card-container {
-    width: 25%; } }
+    width: 25%; }
+
+  #services .slide-item {
+    width: 33%; } }
 
 /*# sourceMappingURL=style.css.map */

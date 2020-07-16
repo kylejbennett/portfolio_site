@@ -112,7 +112,7 @@ header{
 				font-weight: 500;
 				font-size: 1.2rem;
 				opacity: 0;
-				transition: opacity 1.5s ease-in;
+				transition: opacity 1s ease-in;
 				background: $primary-gradient;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
@@ -152,7 +152,7 @@ header{
 		display: block;
 		width: 90%;
 		text-align: center;
-		margin: 0 auto;
+		margin: 4rem auto;
 
 		.about-card{
 			background: linear-gradient(135deg, rgba(142, 48, 48, 0.6) 0%, rgba(6, 44, 51, 0.6) 100%);
@@ -161,13 +161,14 @@ header{
 			width: 100%;
 			max-width: 40rem;
 			margin: 1rem auto;
-			padding: 1rem 2rem;
+			padding: 2rem 2rem 3rem 2rem;
 			text-align: center;
 			border-radius: 4px;
 
 			.material-icons{
 				color: $secondary-color;
 				font-size: 4rem;
+				margin: 1rem 0;
 			}
 
 			h3{
@@ -178,11 +179,75 @@ header{
 
 			p{
 				margin: .5rem 0;
-				font-size: 1.2rem;
+				font-size: 1.5rem;
 				font-weight: 300;
 			}
 		}
 	}
+}
+
+#services{
+	.slider-container{
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.slider{
+		position: relative;
+
+		.material-icons.arrow{
+			cursor: pointer;
+			color: rgba(127, 255, 212, 0.6);
+			z-index: 3;
+			font-size: 6rem;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.material-icons.left{
+			left: 0;
+		}
+
+		.material-icons.right{
+			right: 0;
+		}
+	}
+
+	.slide-item{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: aquamarine;
+		font-family: $secondary-font;
+		display: inline-block;
+		text-align: center;
+		padding: 5rem;
+		transition: transform .3s ease-out;
+
+		.material-icons{
+			font-size: 8rem;
+		}
+
+		h3{
+			text-transform: uppercase;
+			font-size: 2rem;
+			padding: 1rem 0 0.5rem 0;
+		}
+
+		p{
+			font-size: 1.5rem;
+			padding: .5rem;
+			color: #000;
+		}
+	}
+}
+
+#contact{
+	text-align: center;
 }
 
 @media (min-width: 768px){
@@ -224,6 +289,8 @@ header{
 	}
 
 	#about{
+		padding: 10rem 2rem;
+
 		.about-card-container{
 			display: inline-block;
 			vertical-align: top;
@@ -236,7 +303,6 @@ header{
 
 				.material-icons{
 					font-size: 10rem;
-					margin: 2rem 0 1rem 0;
 				}
 				h3{
 					font-size: 3rem;
@@ -245,6 +311,12 @@ header{
 					font-size: 2rem;
 				}
 			}
+		}
+	}
+
+	#services{
+		.slide-item{
+			width: 50%;
 		}
 	}
 }
@@ -265,6 +337,12 @@ header{
 	#about{
 		.about-card-container{
 			width: 25%;
+		}
+	}
+
+	#services{
+		.slide-item{
+			width: 33%;
 		}
 	}
 }
