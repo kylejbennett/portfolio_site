@@ -1,14 +1,22 @@
+var windowWidth;
+
 window.onload = function(){
     setTimeout(function (){
         nameDrop('KYLE BENNETT');
     }, 1000);
 
-    var windowWidth = document.body.clientWidth;
-    document.querySelector('nav').style.transform += 'translateX('+ windowWidth +'px)';
+    windowWidth = document.body.clientWidth;
+    document.querySelector('nav').style.transform = 'translateX('+ windowWidth +'px)';
 
-    window.addEventListener("resize", formatSlider);
+    window.addEventListener("resize", resizeFunction);
+
     formatSlider();
 };
+
+var resizeFunction = function(){
+    windowWidth = document.body.clientWidth;
+    formatSlider();
+}
 
 function nameDrop(name){
     var letterArray = name.split('');
@@ -68,20 +76,19 @@ function typeString(string){
 function revealSkills(){
     document.querySelector('#skill-container p').style.opacity = '1';
     var nav = document.querySelector('nav');
-    nav.style.display = 'block';
+    nav.style.transform = 'translateX('+ windowWidth +'px)';
 
     setTimeout(function(){
         document.querySelector('#info-container button').style.display = 'block';
+        nav.style.display = 'block';
     }, 1000);
 
     setTimeout(function(){
-        var windowWidth = document.body.clientWidth;
-        nav.style.transform += 'translateX(-'+ windowWidth +'px)';
+        nav.style.transform = 'translateX(0)';
     }, 1750);
 }
 
 function toggleMobileMenu(){
-    var windowWidth = document.body.clientWidth;
     var menuIcon = document.querySelector('.mobile-menu i');
     var nav = document.querySelector('nav');
 
@@ -94,7 +101,7 @@ function toggleMobileMenu(){
     }
 }
 
-function handleMenuState(elem){
+function handleMenuState(){
     var menuIcon = document.querySelector('.mobile-menu i');
     var nav = document.querySelector('nav');
 
@@ -109,7 +116,6 @@ function handleMenuState(elem){
     } else if(menuIcon.classList.contains('icon-closed')){
         menuIcon.innerHTML = 'menu';
         nav.className = '';
-        var windowWidth = document.body.clientWidth;
         nav.style.transform += 'translateX(-'+ windowWidth +'px)';
     }
 }

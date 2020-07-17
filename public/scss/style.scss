@@ -143,7 +143,7 @@ header{
 }
 
 #about{
-	background: linear-gradient( 135deg, rgba(67, 138, 152, 0.9) 0%, rgba(216, 135, 135, 0.8) 100% ), url(../images/about.jpg) center no-repeat;
+	background: linear-gradient( 135deg, rgba(67, 138, 152, 0.9) 0%, rgba(216, 135, 135, 0.8) 100% ), url(../images/about.png) center no-repeat;
 	background-size: cover;
 	color: $light-color;
 	padding: 2rem;
@@ -247,7 +247,59 @@ header{
 }
 
 #contact{
-	text-align: center;
+	background: linear-gradient( 135deg, rgba(1, 134, 160, 0.9) 0%, rgba(80, 39, 39, 0.8) 100% );
+	background-size: cover;
+	color: $light-color;
+
+	p.reach-out{
+		font-size: 1.5rem;
+		padding: 0 0 2rem 0;
+	}
+
+	h2{
+		margin: 3rem auto;
+		text-align: center;
+	}
+
+	.form-container{
+		padding: 0 3rem 3rem 3rem;
+		max-width: 768px;
+		margin: 0 auto;
+
+		p{
+			margin: 1rem 0;
+		}
+
+		label{
+			display: block;
+			margin: .5rem 0;
+			font-size: 2rem;
+			font-weight: 500;
+			color: $secondary-color;
+		}
+
+		textarea, input{
+			width: 100%;
+			margin: .5rem 0;
+			padding: .5rem;
+			font-size: 1.5rem;
+			border-radius: 5px;
+			border: none;
+		}
+
+		input{
+			height: 3rem;
+		}
+
+		button{
+			background-color: $secondary-color;
+			color: $light-color;
+			font-size: 2rem;
+			font-weight: 300;
+			padding: 1rem 3rem;
+			border-radius: .5rem;
+		}
+	}
 }
 
 @media (min-width: 768px){
