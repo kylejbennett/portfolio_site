@@ -39,7 +39,6 @@ var updateSlidePosition = function(elem){
     var slidePositionX = slideTransformPosition.x;
     // Find furthest left item and move to furthest right
     if(slidePositionX < -slideItemWidth){
-        console.log(slidePositionX);
         elem.classList.add('last-position');
         sliding = true;
         elem.style.opacity = '0';

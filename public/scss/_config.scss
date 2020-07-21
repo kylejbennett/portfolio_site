@@ -1,12 +1,14 @@
-$primary-font: 'Source Code Pro', monospace;
-$secondary-font: 'Montserrat', sans-serif;
+$primary-font: 'Heebo', sans-serif;
+$secondary-font: 'Source Code Pro', monospace;
 $light-color: #f4f4f4;
-$primary-color: #8ed63b;
-$secondary-color: #ca481f;
+$dark-color: #3a3a3a;
+$primary-color: #ef0d33;
+$secondary-color: #0DEFC9;
 $primary-gradient: linear-gradient( to right, $secondary-color 0%, $primary-color 100% );
 
 h2{
-  color: aquamarine;
+  color: $secondary-color;
+  font-family: $secondary-font;
   font-size: 4rem;
   padding: 6rem 0 0 0;
 }
@@ -21,7 +23,7 @@ button:hover{
 
 span.msg{
   color: green;
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: 1.5rem;
 }
 
@@ -74,6 +76,10 @@ a:hover{
   -moz-animation: blink 1s ease-in-out infinite;
 }
 
+footer{
+  background-color: $dark-color;
+}
+
 @keyframes blink {
   0% {background-color: rgba(255, 255, 255, 0);}
   100% {background-color: rgb(194, 194, 194);}
@@ -124,7 +130,7 @@ a:hover{
     display: block;
     height: 4rem;
     width: 2.4rem;
-    top: 4.3rem;
+    top:5.1rem;
   }
 }
 

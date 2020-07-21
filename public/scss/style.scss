@@ -19,7 +19,8 @@ header{
 	nav{
 		display:none;
 		z-index: 5;
-		background-color: rgba(19, 57, 64, .9);
+		color: $light-color;
+		background-color: rgba(43, 43, 43, .9);
 		position:fixed;
 		top:0;
 		left:0;
@@ -37,9 +38,10 @@ header{
 				padding: 0 2rem;
 
 				a{
-					font-family: $secondary-font;
+					font-family: $primary-font;
 					color: $secondary-color;
 					font-size: 2rem;
+					font-weight: 300;
 				}
 			}
 		}
@@ -63,16 +65,16 @@ header{
 
 #intro{
 	height: 100vh;
-	background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100% ), url(../images/intro2.png) center no-repeat;
+	background: linear-gradient(135deg, rgb(83, 83, 83) 0%, rgba(0, 0, 0, 0.9) 100%), url(../images/intro2.png) center no-repeat;
 	background-size: cover;
-	color: $light-color;
+	color: $secondary-color;
 
 	#info-container{
 		position: relative;
 		overflow: hidden;
 
 		h1{
-			color: $primary-color;
+			color: $secondary-color;
 			display: block;
 			height: 3rem;
 			font-family: $primary-font;
@@ -98,18 +100,21 @@ header{
 
 			h3{
 				display: inline-block;
-				font-family: $primary-font;
-				font-weight: 500;
-				font-size: 1.5rem;
+				color: $light-color;
+				font-family: $secondary-font;
+				font-weight: 600;
+				font-size: 1.6rem;
 				line-height: 4rem;
 			}
 		}
 
 		#skill-container{
 			p{
+				display: inline-block;
 				z-index: 2;
 				font-family: $primary-font;
-				font-weight: 500;
+				font-weight: 400;
+				font-style: italic;
 				font-size: 1.2rem;
 				opacity: 0;
 				transition: opacity 1s ease-in;
@@ -127,9 +132,10 @@ header{
 
 			button{
 				display:none;
+				font-size: 1.2rem;
 				font-family: $primary-font;
-				font-weight: 600;
-				background-color: $secondary-color;
+				font-weight: 400;
+				background-color: $primary-color;
 				color: $light-color;
 				padding: 1rem;
 				border-radius: 5px;
@@ -143,7 +149,7 @@ header{
 }
 
 #about{
-	background: linear-gradient( 135deg, rgba(67, 138, 152, 0.9) 0%, rgba(216, 135, 135, 0.8) 100% ), url(../images/about.png) center no-repeat;
+	background: $light-color;
 	background-size: cover;
 	color: $light-color;
 	padding: 2rem;
@@ -155,8 +161,8 @@ header{
 		margin: 4rem auto;
 
 		.about-card{
-			background: linear-gradient(135deg, rgba(142, 48, 48, 0.6) 0%, rgba(6, 44, 51, 0.6) 100%);
-			font-family: $secondary-font;
+			background: linear-gradient(135deg, rgb(83, 83, 83) 0%, rgba(0, 0, 0, 0.9) 100%);
+			font-family: $primary-font;
 			display: block;
 			width: 100%;
 			max-width: 40rem;
@@ -167,19 +173,21 @@ header{
 
 			.material-icons{
 				color: $secondary-color;
-				font-size: 4rem;
+				font-size: 7rem;
 				margin: 1rem 0;
 			}
 
 			h3{
-				color: $primary-color;
-				font-size: 2rem;
+				color: $light-color;
+				font-family: $secondary-font;
+				font-size: 2.5rem;
 				font-weight: 500;
 			}
 
 			p{
+				color: $light-color;
 				margin: .5rem 0;
-				font-size: 1.5rem;
+				font-size: 1.8rem;
 				font-weight: 300;
 			}
 		}
@@ -187,6 +195,10 @@ header{
 }
 
 #services{
+	h2{
+		color: $primary-color;
+	}
+
 	.slider-container{
 		position: relative;
 		width: 100%;
@@ -199,12 +211,17 @@ header{
 
 		.material-icons.arrow{
 			cursor: pointer;
-			color: rgba(127, 255, 212, 0.6);
+			color: $primary-color;
+			opacity: 0.5;
 			z-index: 3;
 			font-size: 6rem;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
+		}
+
+		.material-icons.arrow:hover{
+			opacity: 1;
 		}
 
 		.material-icons.left{
@@ -221,11 +238,11 @@ header{
 		position: absolute;
 		top: 0;
 		left: 0;
-		color: aquamarine;
-		font-family: $secondary-font;
+		color: $primary-color;
+		font-family: $primary-font;
 		display: inline-block;
 		text-align: center;
-		padding: 5rem;
+		padding: 4rem;
 		transition: transform .3s ease-out;
 
 		.material-icons{
@@ -233,21 +250,23 @@ header{
 		}
 
 		h3{
+			color: $dark-color;
 			text-transform: uppercase;
-			font-size: 2rem;
+			font-family: $secondary-font;
+			font-size: 3rem;
 			padding: 1rem 0 0.5rem 0;
 		}
 
 		p{
-			font-size: 1.5rem;
+			font-size: 2rem;
 			padding: .5rem;
-			color: #000;
+			color: $dark-color;
 		}
 	}
 }
 
 #contact{
-	background: linear-gradient( 135deg, rgba(1, 134, 160, 0.9) 0%, rgba(80, 39, 39, 0.8) 100% );
+	background: linear-gradient(135deg, rgb(83, 83, 83) 0%, rgba(0, 0, 0, 0.9) 100%);
 	background-size: cover;
 	color: $light-color;
 
@@ -274,7 +293,7 @@ header{
 			display: block;
 			margin: .5rem 0;
 			font-size: 2rem;
-			font-weight: 500;
+			font-weight: 400;
 			color: $secondary-color;
 		}
 
@@ -292,9 +311,9 @@ header{
 		}
 
 		button{
-			background-color: $secondary-color;
+			background-color: $primary-color;
 			color: $light-color;
-			font-size: 2rem;
+			font-size: 1.5rem;
 			font-weight: 300;
 			padding: 1rem 3rem;
 			border-radius: .5rem;
@@ -317,7 +336,6 @@ header{
 
 	#intro{
 		#info-container {
-
 			h1{
 				font-size: 3rem;
 
@@ -327,6 +345,8 @@ header{
 			}
 
 			#typing-container{
+				margin: 2rem;
+
 				h3{
 					font-size: 4rem;
 				}
@@ -335,6 +355,12 @@ header{
 			#skill-container{
 				p{
 					font-size: 2rem;
+				}
+			}
+
+			.cta-container{
+				button{
+					font-size: 1.6rem;
 				}
 			}
 		}

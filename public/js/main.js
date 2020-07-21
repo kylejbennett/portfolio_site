@@ -32,11 +32,11 @@ function nameDrop(name){
         if(i <= totalLetters){
             setTimeout(function(){
                 dropLetter();
-            },150);
+            },100);
         } else {
             setTimeout(function(){
                 typeString('FULL STACK WEB DEVELOPER');
-            }, 500);
+            }, 250);
         }
     }
 

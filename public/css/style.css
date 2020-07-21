@@ -1,5 +1,6 @@
 h2 {
-  color: aquamarine;
+  color: #0DEFC9;
+  font-family: "Source Code Pro", monospace;
   font-size: 4rem;
   padding: 6rem 0 0 0; }
 
@@ -11,14 +12,14 @@ button:hover {
 
 span.msg {
   color: green;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Heebo", sans-serif;
   font-size: 1.5rem; }
 
 a {
   text-decoration: none; }
 
 a:hover {
-  color: #8ed63b; }
+  color: #ef0d33; }
 
 .mobile-menu i {
   font-size: 4rem;
@@ -54,6 +55,9 @@ a:hover {
   animation: blink 1s ease-in-out infinite;
   -webkit-animation: blink 1s ease-in-out infinite;
   -moz-animation: blink 1s ease-in-out infinite; }
+
+footer {
+  background-color: #3a3a3a; }
 
 @keyframes blink {
   0% {
@@ -110,7 +114,7 @@ a:hover {
     display: block;
     height: 4rem;
     width: 2.4rem;
-    top: 4.3rem; } }
+    top: 5.1rem; } }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -118,7 +122,7 @@ a:hover {
 
 html {
   font-size: 10px;
-  font-family: "Source Code Pro", monospace; }
+  font-family: "Heebo", sans-serif; }
 
 body {
   background-color: #f4f4f4; }
@@ -126,7 +130,8 @@ body {
 header nav {
   display: none;
   z-index: 5;
-  background-color: rgba(19, 57, 64, 0.9);
+  color: #f4f4f4;
+  background-color: rgba(43, 43, 43, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -141,9 +146,10 @@ header nav {
       display: inline-block;
       padding: 0 2rem; }
       header nav ul li a {
-        font-family: "Montserrat", sans-serif;
-        color: #ca481f;
-        font-size: 2rem; }
+        font-family: "Heebo", sans-serif;
+        color: #0DEFC9;
+        font-size: 2rem;
+        font-weight: 300; }
 header nav.nav-open {
   height: 100vh;
   width: 15rem; }
@@ -156,17 +162,17 @@ header nav.nav-open {
 
 #intro {
   height: 100vh;
-  background: linear-gradient(135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/intro2.png) center no-repeat;
+  background: linear-gradient(135deg, #535353 0%, rgba(0, 0, 0, 0.9) 100%), url(../images/intro2.png) center no-repeat;
   background-size: cover;
-  color: #f4f4f4; }
+  color: #0DEFC9; }
   #intro #info-container {
     position: relative;
     overflow: hidden; }
     #intro #info-container h1 {
-      color: #8ed63b;
+      color: #0DEFC9;
       display: block;
       height: 3rem;
-      font-family: "Source Code Pro", monospace;
+      font-family: "Heebo", sans-serif;
       font-weight: 500;
       font-size: 2.2rem;
       line-height: 3rem;
@@ -184,18 +190,21 @@ header nav.nav-open {
       margin: 1rem; }
       #intro #info-container #typing-container h3 {
         display: inline-block;
+        color: #f4f4f4;
         font-family: "Source Code Pro", monospace;
-        font-weight: 500;
-        font-size: 1.5rem;
+        font-weight: 600;
+        font-size: 1.6rem;
         line-height: 4rem; }
     #intro #info-container #skill-container p {
+      display: inline-block;
       z-index: 2;
-      font-family: "Source Code Pro", monospace;
-      font-weight: 500;
+      font-family: "Heebo", sans-serif;
+      font-weight: 400;
+      font-style: italic;
       font-size: 1.2rem;
       opacity: 0;
       transition: opacity 1s ease-in;
-      background: linear-gradient(to right, #ca481f 0%, #8ed63b 100%);
+      background: linear-gradient(to right, #0DEFC9 0%, #ef0d33 100%);
       -webkit-text-fill-color: transparent;
       background-clip: text;
       -webkit-background-clip: text; }
@@ -205,17 +214,18 @@ header nav.nav-open {
       padding: 4rem 0 0 0; }
       #intro #info-container .cta-container button {
         display: none;
-        font-family: "Source Code Pro", monospace;
-        font-weight: 600;
-        background-color: #ca481f;
+        font-size: 1.2rem;
+        font-family: "Heebo", sans-serif;
+        font-weight: 400;
+        background-color: #ef0d33;
         color: #f4f4f4;
         padding: 1rem;
         border-radius: 5px; }
       #intro #info-container .cta-container button:hover {
-        background-color: #9e3818; }
+        background-color: #0abfa0; }
 
 #about {
-  background: linear-gradient(135deg, rgba(67, 138, 152, 0.9) 0%, rgba(216, 135, 135, 0.8) 100%), url(../images/about.png) center no-repeat;
+  background: #f4f4f4;
   background-size: cover;
   color: #f4f4f4;
   padding: 2rem; }
@@ -225,8 +235,8 @@ header nav.nav-open {
     text-align: center;
     margin: 4rem auto; }
     #about .about-card-container .about-card {
-      background: linear-gradient(135deg, rgba(142, 48, 48, 0.6) 0%, rgba(6, 44, 51, 0.6) 100%);
-      font-family: "Montserrat", sans-serif;
+      background: linear-gradient(135deg, #535353 0%, rgba(0, 0, 0, 0.9) 100%);
+      font-family: "Heebo", sans-serif;
       display: block;
       width: 100%;
       max-width: 40rem;
@@ -235,18 +245,22 @@ header nav.nav-open {
       text-align: center;
       border-radius: 4px; }
       #about .about-card-container .about-card .material-icons {
-        color: #ca481f;
-        font-size: 4rem;
+        color: #0DEFC9;
+        font-size: 7rem;
         margin: 1rem 0; }
       #about .about-card-container .about-card h3 {
-        color: #8ed63b;
-        font-size: 2rem;
+        color: #f4f4f4;
+        font-family: "Source Code Pro", monospace;
+        font-size: 2.5rem;
         font-weight: 500; }
       #about .about-card-container .about-card p {
+        color: #f4f4f4;
         margin: .5rem 0;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 300; }
 
+#services h2 {
+  color: #ef0d33; }
 #services .slider-container {
   position: relative;
   width: 100%;
@@ -256,12 +270,15 @@ header nav.nav-open {
   position: relative; }
   #services .slider .material-icons.arrow {
     cursor: pointer;
-    color: rgba(127, 255, 212, 0.6);
+    color: #ef0d33;
+    opacity: 0.5;
     z-index: 3;
     font-size: 6rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%); }
+  #services .slider .material-icons.arrow:hover {
+    opacity: 1; }
   #services .slider .material-icons.left {
     left: 0; }
   #services .slider .material-icons.right {
@@ -271,25 +288,27 @@ header nav.nav-open {
   position: absolute;
   top: 0;
   left: 0;
-  color: aquamarine;
-  font-family: "Montserrat", sans-serif;
+  color: #ef0d33;
+  font-family: "Heebo", sans-serif;
   display: inline-block;
   text-align: center;
-  padding: 5rem;
+  padding: 4rem;
   transition: transform .3s ease-out; }
   #services .slide-item .material-icons {
     font-size: 8rem; }
   #services .slide-item h3 {
+    color: #3a3a3a;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-family: "Source Code Pro", monospace;
+    font-size: 3rem;
     padding: 1rem 0 0.5rem 0; }
   #services .slide-item p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: .5rem;
-    color: #000; }
+    color: #3a3a3a; }
 
 #contact {
-  background: linear-gradient(135deg, rgba(1, 134, 160, 0.9) 0%, rgba(80, 39, 39, 0.8) 100%);
+  background: linear-gradient(135deg, #535353 0%, rgba(0, 0, 0, 0.9) 100%);
   background-size: cover;
   color: #f4f4f4; }
   #contact p.reach-out {
@@ -308,8 +327,8 @@ header nav.nav-open {
       display: block;
       margin: .5rem 0;
       font-size: 2rem;
-      font-weight: 500;
-      color: #ca481f; }
+      font-weight: 400;
+      color: #0DEFC9; }
     #contact .form-container textarea, #contact .form-container input {
       width: 100%;
       margin: .5rem 0;
@@ -320,9 +339,9 @@ header nav.nav-open {
     #contact .form-container input {
       height: 3rem; }
     #contact .form-container button {
-      background-color: #ca481f;
+      background-color: #ef0d33;
       color: #f4f4f4;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 300;
       padding: 1rem 3rem;
       border-radius: .5rem; }
@@ -337,10 +356,14 @@ header nav.nav-open {
     font-size: 3rem; }
     #intro #info-container h1 span {
       min-width: 2.9rem; }
-  #intro #info-container #typing-container h3 {
-    font-size: 4rem; }
+  #intro #info-container #typing-container {
+    margin: 2rem; }
+    #intro #info-container #typing-container h3 {
+      font-size: 4rem; }
   #intro #info-container #skill-container p {
     font-size: 2rem; }
+  #intro #info-container .cta-container button {
+    font-size: 1.6rem; }
 
   #about {
     padding: 10rem 2rem; }
