@@ -1,13 +1,23 @@
 h2 {
-  color: #0DEFC9;
+  color: #66c3b3;
   font-family: "Source Code Pro", monospace;
   font-size: 4rem;
   padding: 6rem 0 0 0; }
 
 button {
-  border: none; }
+  border: none;
+  transition: background .3s ease-out;
+  font-size: 1.2rem;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  background-color: #e74443;
+  color: #f4f4f4;
+  padding: 1rem 2rem;
+  border-radius: 5px; }
 
 button:hover {
+  background-color: #45b19e;
+  font-weight: 500;
   cursor: pointer; }
 
 span.msg {
@@ -19,7 +29,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: #ef0d33; }
+  color: #e74443; }
 
 .mobile-menu i {
   font-size: 4rem;
@@ -116,7 +126,10 @@ footer {
     display: block;
     height: 4rem;
     width: 2.4rem;
-    top: 5.1rem; } }
+    top: 5.1rem; }
+
+  button {
+    font-size: 1.6rem; } }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -149,9 +162,10 @@ header nav {
       padding: 0 2rem; }
       header nav ul li a {
         font-family: "Heebo", sans-serif;
-        color: #0DEFC9;
+        color: #66c3b3;
         font-size: 2rem;
-        font-weight: 300; }
+        font-weight: 300;
+        transition: color .3s ease-out; }
 header nav.nav-open {
   height: 100vh;
   width: 15rem; }
@@ -164,14 +178,14 @@ header nav.nav-open {
 
 #intro {
   height: 100vh;
-  background: linear-gradient(135deg, #535353 0%, rgba(0, 0, 0, 0.9) 100%), url(../images/intro2.png) center no-repeat;
+  background: linear-gradient(135deg, #6e6e6e 0%, rgba(12, 12, 12, 0.9) 100%), url(../images/intro2.png) center no-repeat;
   background-size: cover;
-  color: #0DEFC9; }
+  color: #66c3b3; }
   #intro #info-container {
     position: relative;
     overflow: hidden; }
     #intro #info-container h1 {
-      color: #0DEFC9;
+      color: #66c3b3;
       display: block;
       height: 3rem;
       font-family: "Heebo", sans-serif;
@@ -206,7 +220,7 @@ header nav.nav-open {
       font-size: 1.2rem;
       opacity: 0;
       transition: opacity 1s ease-in;
-      background: linear-gradient(to right, #0DEFC9 0%, #ef0d33 100%);
+      background: linear-gradient(to right, #66c3b3 0%, #e74443 100%);
       -webkit-text-fill-color: transparent;
       background-clip: text;
       -webkit-background-clip: text; }
@@ -215,29 +229,22 @@ header nav.nav-open {
       height: 10rem;
       padding: 4rem 0 0 0; }
       #intro #info-container .cta-container button {
-        display: none;
-        font-size: 1.2rem;
-        font-family: "Heebo", sans-serif;
-        font-weight: 400;
-        background-color: #ef0d33;
-        color: #f4f4f4;
-        padding: 1rem;
-        border-radius: 5px; }
-      #intro #info-container .cta-container button:hover {
-        background-color: #0abfa0; }
+        display: none; }
 
 #about {
   background: #f4f4f4;
   background-size: cover;
   color: #f4f4f4;
-  padding: 2rem; }
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto; }
   #about .about-card-container {
     display: block;
     width: 90%;
     text-align: center;
     margin: 4rem auto; }
     #about .about-card-container .about-card {
-      background: linear-gradient(135deg, #535353 0%, rgba(0, 0, 0, 0.9) 100%);
+      background: linear-gradient(135deg, #6e6e6e 0%, rgba(12, 12, 12, 0.9) 100%);
       font-family: "Heebo", sans-serif;
       display: block;
       width: 100%;
@@ -247,7 +254,7 @@ header nav.nav-open {
       text-align: center;
       border-radius: 4px; }
       #about .about-card-container .about-card .material-icons {
-        color: #0DEFC9;
+        color: #66c3b3;
         font-size: 7rem;
         margin: 1rem 0; }
       #about .about-card-container .about-card h3 {
@@ -262,17 +269,18 @@ header nav.nav-open {
         font-weight: 300; }
 
 #services h2 {
-  color: #ef0d33; }
+  color: #66c3b3; }
 #services .slider-container {
   position: relative;
   width: 100%;
   overflow: hidden;
   text-align: center; }
 #services .slider {
-  position: relative; }
+  position: relative;
+  margin: 4rem 0; }
   #services .slider .material-icons.arrow {
     cursor: pointer;
-    color: #ef0d33;
+    color: #e74443;
     opacity: 0.5;
     z-index: 3;
     font-size: 6rem;
@@ -290,7 +298,7 @@ header nav.nav-open {
   position: absolute;
   top: 0;
   left: 0;
-  color: #ef0d33;
+  color: #e74443;
   font-family: "Heebo", sans-serif;
   display: inline-block;
   text-align: center;
@@ -310,7 +318,7 @@ header nav.nav-open {
     color: #3a3a3a; }
 
 #contact {
-  background: linear-gradient(135deg, #535353 0%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(135deg, #6e6e6e 0%, rgba(12, 12, 12, 0.9) 100%);
   background-size: cover;
   color: #f4f4f4; }
   #contact p.reach-out {
@@ -330,7 +338,7 @@ header nav.nav-open {
       margin: .5rem 0;
       font-size: 2rem;
       font-weight: 400;
-      color: #0DEFC9; }
+      color: #66c3b3; }
     #contact .form-container textarea, #contact .form-container input {
       width: 100%;
       margin: .5rem 0;
@@ -340,15 +348,6 @@ header nav.nav-open {
       border: none; }
     #contact .form-container input {
       height: 3rem; }
-    #contact .form-container button {
-      background-color: #ef0d33;
-      color: #f4f4f4;
-      font-size: 1.5rem;
-      font-weight: 300;
-      padding: 1rem 3rem;
-      border-radius: .5rem; }
-    #contact .form-container button:hover {
-      background-color: #0DEFC9; }
 
 footer .social-link img {
   margin: 0 2rem;
@@ -361,9 +360,9 @@ footer .about-site {
     color: #c2c2c2;
     font-size: 1.2rem; }
   footer .about-site a {
-    color: #0DEFC9; }
+    color: #66c3b3; }
   footer .about-site a:hover {
-    color: #ef0d33; }
+    color: #e74443; }
 
 @media (min-width: 768px) {
   header nav .mobile-menu {
@@ -381,8 +380,6 @@ footer .about-site {
       font-size: 4rem; }
   #intro #info-container #skill-container p {
     font-size: 2rem; }
-  #intro #info-container .cta-container button {
-    font-size: 1.6rem; }
 
   #about {
     padding: 10rem 2rem; }
@@ -407,9 +404,6 @@ footer .about-site {
   #intro #info-container #skill-container p {
     font-size: 2.5rem; } }
 @media (min-width: 1200px) {
-  #about .about-card-container {
-    width: 25%; }
-
   #services .slide-item {
     width: 33%; } }
 

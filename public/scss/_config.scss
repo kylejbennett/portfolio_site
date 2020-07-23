@@ -2,8 +2,8 @@ $primary-font: 'Heebo', sans-serif;
 $secondary-font: 'Source Code Pro', monospace;
 $light-color: #f4f4f4;
 $dark-color: #3a3a3a;
-$primary-color: #ef0d33;
-$secondary-color: #0DEFC9;
+$primary-color: #e74443;
+$secondary-color: #66c3b3;
 $primary-gradient: linear-gradient( to right, $secondary-color 0%, $primary-color 100% );
 
 h2{
@@ -15,9 +15,19 @@ h2{
 
 button{
   border: none;
+  transition: background .3s ease-out;
+  font-size: 1.2rem;
+  font-family: $primary-font;
+  font-weight: 400;
+  background-color: $primary-color;
+  color: $light-color;
+  padding: 1rem 2rem;
+  border-radius: 5px;
 }
 
 button:hover{
+  background-color: darken($secondary-color, 10);
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -133,6 +143,10 @@ footer{
     height: 4rem;
     width: 2.4rem;
     top:5.1rem;
+  }
+
+  button{
+    font-size: 1.6rem;
   }
 }
 
