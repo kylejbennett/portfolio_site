@@ -89,15 +89,17 @@ function revealSkills(){
 }
 
 function toggleMobileMenu(){
-    var menuIcon = document.querySelector('.mobile-menu i');
-    var nav = document.querySelector('nav');
+    if(windowWidth < 768){
+        var menuIcon = document.querySelector('.mobile-menu i');
+        var nav = document.querySelector('nav');
 
-    if(menuIcon.classList.contains('icon-closed')){
-        menuIcon.className = 'material-icons icon-open';
-        nav.style.transform += 'translateX('+ windowWidth +'px)';
-    } else {
-        menuIcon.className = 'material-icons icon-closed';
-        nav.style.transform += 'translateX(15rem)';
+        if(menuIcon.classList.contains('icon-closed')){
+            menuIcon.className = 'material-icons icon-open';
+            nav.style.transform += 'translateX('+ windowWidth +'px)';
+        } else {
+            menuIcon.className = 'material-icons icon-closed';
+            nav.style.transform += 'translateX(15rem)';
+        }
     }
 }
 

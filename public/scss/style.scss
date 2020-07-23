@@ -318,6 +318,36 @@ header{
 			padding: 1rem 3rem;
 			border-radius: .5rem;
 		}
+
+		button:hover{
+			background-color: $secondary-color;
+		}
+	}
+}
+
+footer{
+	.social-link img{
+		margin: 0 2rem;
+		width: 5rem;
+	}
+
+	.about-site{
+		margin: 0 auto;
+		max-width: 960px;
+		padding: 3rem;
+
+		p{
+			color: #c2c2c2;
+			font-size: 1.2rem;
+		}
+
+		a{
+			color: $secondary-color;
+		}
+
+		a:hover{
+			color: $primary-color;
+		}
 	}
 }
 

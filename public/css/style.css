@@ -57,7 +57,9 @@ a:hover {
   -moz-animation: blink 1s ease-in-out infinite; }
 
 footer {
-  background-color: #3a3a3a; }
+  background-color: #3a3a3a;
+  padding: 2rem 0;
+  text-align: center; }
 
 @keyframes blink {
   0% {
@@ -345,6 +347,23 @@ header nav.nav-open {
       font-weight: 300;
       padding: 1rem 3rem;
       border-radius: .5rem; }
+    #contact .form-container button:hover {
+      background-color: #0DEFC9; }
+
+footer .social-link img {
+  margin: 0 2rem;
+  width: 5rem; }
+footer .about-site {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 3rem; }
+  footer .about-site p {
+    color: #c2c2c2;
+    font-size: 1.2rem; }
+  footer .about-site a {
+    color: #0DEFC9; }
+  footer .about-site a:hover {
+    color: #ef0d33; }
 
 @media (min-width: 768px) {
   header nav .mobile-menu {
