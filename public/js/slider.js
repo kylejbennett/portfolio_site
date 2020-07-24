@@ -16,6 +16,10 @@ var formatSlider = function(){
     }
 
     slider.style.height = sliderHeight + 'px';
+    slider.addEventListener('touchstart', handleTouchStart, false);
+    slider.addEventListener('touchmove', handleTouchMove, false);
+    slider.addEventListener('mousedown', handleTouchStart, false);
+    slider.addEventListener('drag', handleTouchMove, false);
     setSlidePositions();
 };
 
@@ -72,4 +76,44 @@ function nextItem(){
             slideItemArr[i].style.transform = 'translateX(' + (slidePositionX - slideItemWidth) + 'px)';
         }
     }
+}
+
+function handleTouchStart(evt) {
+    // console.log(evt);
+    xStart = evt.pageX || evt.touches[0].clientX;
+    /* starting horizontal position of swipe */
+    yStart = evt.pageY || evt.touches[0].clientY;
+    /* starting vertical postion of swipe */
+}
+
+function handleTouchMove(evt) {
+    evt.preventDefault();
+    if (!xStart || !yStart) {
+        return;
+    }
+
+    var xEnd = evt.pageX || evt.touches[0].clientX;
+    /* ending horizontal position of swipe */
+    var yEnd = evt.pageY || evt.touches[0].clientY;
+    /* ending vertical position of swipe */
+
+    var horizontalSwipeDistance = Math.abs(xStart - xEnd);
+    var verticalSwipeDistance = Math.abs(yStart - yEnd);
+
+    var horizontalSwipe = horizontalSwipeDistance > verticalSwipeDistance;
+    /*most significant*/
+    var swipeLeft = xStart > xEnd;
+    var swipeDown = yStart < yEnd;
+
+    if (horizontalSwipe) {
+        if (swipeLeft) {
+            nextItem();
+        } else {
+            prevItem();
+        }
+    }
+
+    /* reset values */
+    xStart = null;
+    yStart = null;
 }
