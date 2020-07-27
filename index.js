@@ -65,7 +65,7 @@ app.post('/send', (req, res) => {
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
         res.render('main', {
-            msg: 'Email has been sent'
+            msg: 'Email has been sent. Thank You!'
         });
     }
 
