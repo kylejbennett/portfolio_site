@@ -305,6 +305,50 @@ header{
 	}
 }
 
+#projects{
+	padding: 2rem 0;
+
+	h2{
+		text-align: center;
+	}
+
+	.project-card{
+		margin: 2rem auto;
+		padding: 1rem;
+		width:100%;
+
+		h3{
+			font-size: 2rem;
+		}
+
+		a{
+			color: $dark-color;
+		}
+
+		img{
+			display: block;
+			width: 100%;
+			margin: .5rem 0;
+		}
+
+		p{
+			font-size: 1.8rem;
+		}
+
+		.repo-link{
+			color: $secondary-color;
+			font-size: 1.5rem;
+
+			img{
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 1rem;
+				width: 2rem;
+			}
+		}
+	}
+}
+
 footer{
 	.social-link img{
 		margin: 0 2rem;
@@ -399,6 +443,15 @@ footer{
 	#services{
 		.slide-item{
 			width: 50%;
+		}
+	}
+
+	#projects{
+		.project-card{
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			padding: 2rem 5rem;
 		}
 	}
 }

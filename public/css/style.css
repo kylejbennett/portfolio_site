@@ -389,6 +389,33 @@ header nav.nav-open {
     #contact .form-container input {
       height: 3rem; }
 
+#projects {
+  padding: 2rem 0; }
+  #projects h2 {
+    text-align: center; }
+  #projects .project-card {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 100%; }
+    #projects .project-card h3 {
+      font-size: 2rem; }
+    #projects .project-card a {
+      color: #3a3a3a; }
+    #projects .project-card img {
+      display: block;
+      width: 100%;
+      margin: .5rem 0; }
+    #projects .project-card p {
+      font-size: 1.8rem; }
+    #projects .project-card .repo-link {
+      color: #66c3b3;
+      font-size: 1.5rem; }
+      #projects .project-card .repo-link img {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1rem;
+        width: 2rem; }
+
 footer .social-link img {
   margin: 0 2rem;
   width: 5rem; }
@@ -439,7 +466,13 @@ footer .about-site {
           font-size: 2rem; }
 
   #services .slide-item {
-    width: 50%; } }
+    width: 50%; }
+
+  #projects .project-card {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 2rem 5rem; } }
 @media (min-width: 960px) {
   #intro #info-container #skill-container p {
     font-size: 2.5rem; } }

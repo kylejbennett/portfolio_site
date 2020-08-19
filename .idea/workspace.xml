@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f3d95b56-c742-470a-95ed-9bbf0bfd402a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/_config.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/_config.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/style.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/cfeacd73d4373606788c6c5211e4f89664315024/style.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scss/_config.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/_config.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.handlebars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/contact.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/contact.handlebars" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
       <recent name="C:\Users\KyleBennett\Documents\projects\portfolio_site\views\layouts" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -69,12 +69,16 @@
       <workItem from="1595269952415" duration="1933000" />
       <workItem from="1595334586625" duration="9136000" />
       <workItem from="1595359636386" duration="22490000" />
-      <workItem from="1595871195504" duration="2940000" />
+      <workItem from="1595871195504" duration="7891000" />
+      <workItem from="1595956246437" duration="19000" />
+      <workItem from="1597695824971" duration="3729000" />
+      <workItem from="1597755090701" duration="5511000" />
+      <workItem from="1597854104256" duration="204000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="217" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594232462694">
